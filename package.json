@@ -1,0 +1,47 @@
+{
+  "name": "miniproj-be-user",
+  "version": "1.0.0",
+  "description": "miniproj-be-user",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "test": "jest",
+    "migration:generate": "typeorm-ts-node-commonjs migration:generate -d src/typeorm.config.ts ./src/migration/Automigration",
+    "migration:run": "typeorm-ts-node-commonjs migration:run -d src/typeorm.config.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trysoehardi/miniproj-be-user.git"
+  },
+  "author": "Try Suhardi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trysoehardi/miniproj-be-user/issues"
+  },
+  "homepage": "https://github.com/trysoehardi/miniproj-be-user#readme",
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.0.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.3",
+    "typeorm": "^0.3.25"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.0.5",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
